@@ -59,6 +59,7 @@ type App struct {
 }
 
 func (a *App) Run(config *config.Config) error {
-	a.Router = setupRouter()
+	r := setupRouter()
+	a.Router = r
 	return a.Router.Run(fmt.Sprintf("%s:%d", config.App.Addr, config.App.Port))
 }
