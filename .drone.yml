@@ -1,0 +1,8 @@
+kind: pipeline
+type: docker
+name: ci
+steps:
+  - name: test
+    image: d.ctdn.net/golang:latest
+    commands:
+      - go build
